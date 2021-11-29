@@ -1,6 +1,20 @@
+/*
+*
+*   Icons From
+*   Google Material Icons
+*   APACHE LICENSE 2.0
+*
+*   Colors from
+*   Google Material Colors
+*   
+*/ 
+
+
 body {
     font-size: 16px;
     background:linear-gradient(-100deg, #A2F2F1 0%, #B19AFE 100%);
+    margin:0;
+    padding:0;
 }
 
 * {
@@ -26,6 +40,25 @@ a:hover {
     color: #97b1d1;
 }
 
+ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background: white;
+    display:inline;
+}
+
+li {
+    height:100%;
+}
+
+hr {
+    margin:0;
+    padding:0;
+    opacity:0.6;
+}
+
 .container {
     max-width: 32rem;
     width:90%;
@@ -49,6 +82,15 @@ a:hover {
     justify-content: center;
     flex-wrap:wrap;
     padding: 2.5rem;
+}
+
+.wrapper-feedback {
+    margin: 10px auto;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:flex-start;
 }
 
 .form-head {
@@ -102,10 +144,259 @@ a:hover {
     width: 100%;
 }
 
+.margin0 {
+    margin:0;
+}
+
+.padding0 {
+    padding:0;
+}
+
+.title {
+    margin-left: 40px;
+    font-size:40px;
+    font-weight: 500;
+    
+}
+
+.nav {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    align-items: center;
+    
+}
+
+.input-box {
+    border-radius: 15px;
+    margin-right: 40px;
+    padding:8px 20px;
+    background-color: #ECEFF1;
+    outline: 0;
+}
+
+
+.search {
+    
+    background-image: url('src/images/search_icon.svg');
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+}
+
+.message {
+    width:45rem;
+}
+
+.flexbox {
+    display: flex;
+    flex:1;
+}
+
+label {
+    position: relative;
+  }
+  
+  label:before {
+    content: "";
+    position: absolute;
+    right: 55px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: url('src/images/message.svg') center / contain no-repeat;
+    background-position: 98% 50%;
+    opacity:0.5;
+    filter: invert(62%) sepia(63%) saturate(4553%) hue-rotate(150deg) brightness(100%) contrast(101%);
+  }
+
+.message::placeholder {
+    color: #00BCD4;
+    opacity: 1;
+}
+
+.profile {
+    background-color: white;
+    margin-right: 5px;
+    max-width: 18rem;
+    width:45%;
+    text-align:center;
+}
+
+.profile-image {
+    background-image: url('src/images/profile_image.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius:50%;
+}
+
+.side-profile {
+    width:5.25rem;
+    height:5.25rem;
+    margin:5px auto;
+}
+
+.feed-profile {
+    width:2.5rem;
+    height:2.5rem;
+}
+
+.post-image {
+    width: 3rem;
+    height:3rem;
+}
+
+.inner-profile {
+    width:100%;
+    background-color:#ECEFF1;
+    height:3.75rem;
+}
+
+.inner-profile ul {
+    height: 3.75rem;
+}
+
+.inner-profile ul li {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    width: 25%;
+    float: left;
+}
+
+.inner-profile ul li div {
+    text-align:left;
+    font-size: 1.125rem;
+    font-weight:700;
+    color: #00BCD4;
+}
+
+.socials {
+    font-size: 0.75rem;
+    color: #607D8B;
+}
+
+.feed {
+    margin-left: 5px;
+    max-width:55rem;
+    width:50%;
+}
+
+.post-container1 {
+    height:3rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.post-container {
+    min-height:7rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.oval-border {
+    border: 1px solid #00BCD4;
+    border-radius: 30px;
+}
+
+.btn {
+    max-width: 10rem;
+    padding: 8px;
+    color: #00BCD4;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #fff;
+}
+
+.strong {
+    font-weight: 700;
+}
+
+.post-container {
+    padding: 1rem;
+    font-size: 0.875rem;
+}
+
+.post-inner-container {
+    width:47rem;
+}
+
+.post-author {
+    font-weight: 700;
+}
+
+.timer {
+    color: #848694;
+}
+
+.post-text {
+    margin-top:5px;
+}
+
+.rating {
+    padding-top: 15px;
+    cursor:pointer;
+}
+
+.thumbs {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.thumbs:hover {
+    color:#00BCD4;
+}
+
+.close {
+    font-size:18px;
+    float:right;
+    cursor:pointer;
+}
+
+.close:hover {
+    color:red;
+}
+
+.int-rating {
+    padding-right:40px;
+}
+
 @media only screen and (max-width: 890px) {
 
     .wrapper {
         padding: 3.5rem 2.5rem;
         max-width:25rem;
+    }
+
+    .message {
+        width:19rem;
+    }
+}
+
+@media only screen and (max-width: 1720px) {
+
+    .message {
+        width:30rem;
+    }
+}
+
+@media only screen and (max-width: 1220px) {
+
+    .message {
+        width:20rem;
     }
 }

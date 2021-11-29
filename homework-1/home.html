@@ -5,29 +5,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="vesselin Jivkov">
+    <meta name="description" content="HomeWork 1">
     <title>Home | Front-End HomeWork 1 - Vesselin Jivkov</title>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <main class="container">
-        <div class="wrapper">
-            <header>
-                <h1 class="form-head">Flutter</h1>
-                <div class="subtitle">Login</div>
-            </header>
-            <section>
-                <form action="home.html" method="get" class="login-form">
-                    <input id="email" type="email" placeholder="Email" name="mail" required />
-                    <input id="password" type="password" placeholder="Password" required />
-                    <button type="submit" value="Submit" class="button">Submit</button>
-                </form>
-            </section>
-            <a href="register.html" class="register">Create account</a>
-        </div>
+    <nav>
+        <ul class="nav">
+            <li>
+                <h1 class="margin0 title"> Flutter</h1>
+            </li>
+            <li><input type="search" class="input-box search" name="search" placeholder="Search.." /></li>
+        </ul>
+    </nav>
+    <main class="wrapper-feedback">
+        <aside class="profile">
+            <div class="profile-image side-profile"></div>
+            <strong>Martin Hristov</strong>
+            <div class="inner-profile">
+                <ul>
+                    <li><span class="socials strong">Post</span>
+                        <div>1</div>
+                    </li>
+                    <li><span class="socials strong">Reactions</span>
+                        <div>8</div>
+                    </li>
+                    <li style="float:right; width:40%;">
+                        <button class="btn oval-border strong">Log Out</button>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="feed">
+            <div class="post-container1">
+                <div class="profile-image feed-profile"></div>
+                <label>
+                    <input type="text" class="input-box message" name="message" size=50 placeholder="Say something " />
+                </label>
+            </div>
+            <hr>
+            <div class="post-container">
+                <div class="profile-image post-image"></div>
+                <div class="post-inner-container">
+                    <div class="post-author">Ivan Ivanov <span class="timer">• 3 minutes ago</span>
+                        <span class="material-icons close">
+                            close
+                        </span>
+                    </div>
+                    <p class="post-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                        id est laborum.</p>
+                    <div class="rating">
+                        <span class="material-icons thumbs">
+                            thumb_up
+                        </span>
+                        <span class="int-rating">5</span>
+                        <span class="material-icons thumbs">
+                            thumb_down
+                        </span>
+                        <span class="int-rating">3</span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="post-container">
+                <div class="profile-image post-image"></div>
+                <div class="post-inner-container">
+                    <div class="post-author">Martin Hristov <span class="timer">• Last month</span>
+                        <span class="material-icons close">
+                            close
+                        </span>
+                    </div>
+                    <p class="post-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                        id est laborum.</p>
+                    <div class="rating">
+                        <span class="material-icons thumbs">
+                            thumb_up
+                        </span>
+                        <span class="int-rating">3</span>
+                        <span class="material-icons thumbs">
+                            thumb_down
+                        </span>
+                        <span class="int-rating">0</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-  
+
 </body>
-  
+
 </html>
