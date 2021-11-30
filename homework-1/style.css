@@ -448,11 +448,15 @@ label {
     }
 
     .search {
-        margin-right:10px;
+        margin-right:0px;
     }
 
     .title {
-        margin-left: 10px;
+        margin-left: 0px;
+    }
+
+    .message {
+        width: 50%;
     }
 }
 
