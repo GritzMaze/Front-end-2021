@@ -1,0 +1,129 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  border: 1px solid red;
+  box-sizing: border-box;
+  margin-left: 400px;
+  margin-top: 200px;
+  height: 768px;
+  width: 1336px;
+}
+
+/* Add your CSS here */
+
+.header {
+  background-image: linear-gradient(green, white);
+  height: 240px;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  width:70%;
+}
+
+nav {
+  width:30%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background: none;
+}
+
+nav li {
+  padding: 0.5rem 1rem;
+  border: 2px dotted blue;
+  float: left;
+  margin: 0 5px;
+  color: white;
+  font-size: 20px;
+  cursor:pointer;
+}
+
+.helper {
+  padding: 30px 40px;
+  height:100%;
+    margin: 0 auto;
+}
+
+.helper2 {
+  display:flex;
+  align-items: center;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.input-header {
+  padding:10px;
+}
+
+.btn {
+  padding:10px;
+  background: purple;
+  width:30%;
+  color:white;
+  cursor:pointer;
+}
+
+.btn:hover {
+  background:peru;
+  border: 1px dashed white;
+}
+
+.pink {
+  background:pink;
+}
+
+.skyblue {
+  background:skyblue;
+}
+
+main ul li {
+  padding: 12px 8px 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size:18px;
+}
+
+main ul li:hover {
+  background:white;
+}
+
+main ul li:focus {
+  background:green;
+}
+
+
+.input {
+  padding:10px;
+  width:100px;
+}
+
+.input:hover {
+  border:1px solid black;
+}
+
+.tick {
+  display:none;
+}
+
+.tick:focus {
+  display:inline;
+}
+
+main ul li:active ~ .tick {
+  display:inline;
+}
