@@ -183,9 +183,19 @@ hr {
     padding: 8px 20px;
 }
 
+.search:focus {
+    border:1px solid black;
+}
+
 .message {
-    width: 100%;
-    padding: 8px 6px;
+    width: 80%;
+    padding: 8px 10px;
+    color:#00BCD4;
+    border: 1px solid #00BCD4;
+    background: url('src/images/message.svg') center / contain no-repeat;
+    background-position: 98% 50%;
+    background-size:20px;
+    filter: invert(49%) sepia(97%) saturate(1000%) hue-rotate(182deg) brightness(102%) contrast(98%);
 }
 
 .flexbox {
@@ -198,7 +208,7 @@ label {
     position: relative;
 }
 
-label:before {
+/* label:before {
     content: "";
     position: absolute;
     right: 0;
@@ -209,12 +219,14 @@ label:before {
     background-position: 98% 50%;
     opacity: 0.8;
     filter: invert(62%) sepia(63%) saturate(4553%) hue-rotate(150deg) brightness(100%) contrast(101%);
-}
+} */
 
 .message::placeholder {
     color: #00BCD4;
-    opacity: 1;
-    padding-left: 10px;
+}
+
+.message:focus {
+    border:2px solid #00BCD4;
 }
 
 .profile {
@@ -419,6 +431,10 @@ label:before {
     .btn-log-out {
         width:30%;
     }
+
+    .btn {
+        margin-right: -30px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -434,6 +450,7 @@ label:before {
     .search {
         margin-right:10px;
     }
+
     .title {
         margin-left: 10px;
     }
