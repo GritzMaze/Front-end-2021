@@ -316,6 +316,7 @@ label {
     color: #00BCD4;
     font-size: 16px;
     cursor: pointer;
+    background:none;
 }
 
 .btn:hover {
