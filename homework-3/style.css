@@ -48,6 +48,10 @@
     margin: 10px auto;
 }
 
+.table {
+    margin-top: 15px;
+}
+
 .table ui5-table-row{
     text-align:left;
 }

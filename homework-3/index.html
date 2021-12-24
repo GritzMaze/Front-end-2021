@@ -20,43 +20,64 @@
     </header>
 
     <main>
-        <div class="inputs">
-            <ui5-input placeholder="Filter by name" class="input"></ui5-input>
-            <ui5-input placeholder="Filter by region" class="input"></ui5-input>
-            <ui5-input placeholder="Filter by category" class="input"></ui5-input>
+        <div class="inputs" id = "inputs">
+            <ui5-input placeholder="Filter by name" class="input" id="filter-by-name" data-atribute="data-name"></ui5-input>
+            <ui5-input placeholder="Filter by region" class="input" id="filter-by-region" data-atribute="data-region"></ui5-input>
+            <ui5-input placeholder="Filter by category" class="input" id="filter-by-category" data-atribute="data-category"></ui5-input>
         </div>
+        <div style ="margin:auto; text-align:center; padding-bottom: 10px;">
+            <ui5-button design="Default" icon="refresh" id="load">Load</ui5-button>
+            <ui5-button design="Positive" icon="add" id="add">Add</ui5-button>
+            <ui5-button design="Negative" icon="delete" id="clear">Clear storage</ui5-button>
+            <ui5-button icon="hide" design="Negative" id="hide" ></ui5-button>
+        </div>
+        <ui5-dialog id="add-recipe" header-text="Add a recipe">
+            <section class="login-form">
+                <div>
+                    <ui5-label for="name">Name: </ui5-label>
+                    <ui5-input id="form-name" type="Text" required></ui5-input>
+                </div>
+        
+                <div>
+                    <ui5-label for="image">Image: </ui5-label>
+                    <ui5-input id="form-image" type="URL" required></ui5-input>
+                </div>
+        
+                <div>
+                    <ui5-label for="region">Region: </ui5-label>
+                    <ui5-input id="form-region" type="Text"></ui5-input>
+                </div>
+        
+                <div>
+                    <ui5-label for="category">Category: </ui5-label>
+                    <ui5-input id="form-category" type="Text"></ui5-input>
+                </div>
+                
+                <div>
+                    <ui5-label for="category">Instructions: </ui5-label>
+                    <ui5-textarea id="form-instructions" type="Text"></ui5-textarea>
+                </div>
 
-        <style>
-            .ui5-panel-header {
-                display: none;
-            }
-        </style>
+                <div>
+                    <ui5-table class="table">
+                        <ui5-table-column slot="columns">
+                            <span style="line-height: 1.4rem; font-weight: var(--fontweight1);">Ingredients</span>
+                        </ui5-table-column>
+                    
+                        <ui5-table-column slot="columns">
+                            <span style="line-height: 1.4rem; font-weight: var(--fontweight1);">Measure</span>
+                        </ui5-table-column>
+                    </ui5-table>
+                </div>
+            </section>
+        
+            <div slot="footer"	class="dialog-footer">
+                <div style="flex: 1;"></div>
+                <ui5-button id="closeDialogButton" design="Emphasized">Register</ui5-button>
+            </div>
+        </ui5-dialog>
         <div class="panel">
                 <ui5-list id="myList">
-                    <ui5-li image="https://www.themealdb.com/images/media/meals/sytuqu1511553755.jpg"
-                        icon="hint"
-                        icon-end
-                        description="Beef, Thai">Massaman Beef Cury</ui5-li>
-                    <ui5-li image="https://www.themealdb.com/images/media/meals/sytuqu1511553755.jpg"
-                        icon="hint"
-                        icon-end
-                        description="Beef, Thai">Massaman Beef Cury</ui5-li>
-                    <ui5-li image="https://www.themealdb.com/images/media/meals/sytuqu1511553755.jpg"
-                        icon="hint"
-                        icon-end
-                        description="Beef, Thai">Massaman Beef Cury</ui5-li>
-                    <ui5-li image="https://www.themealdb.com/images/media/meals/sytuqu1511553755.jpg"
-                        icon="hint"
-                        icon-end
-                        description="Beef, Thai">Massaman Beef Cury</ui5-li>
-                    <ui5-li image="https://www.themealdb.com/images/media/meals/sytuqu1511553755.jpg"
-                        icon="hint"
-                        icon-end
-                        description="Beef, Thai">Massaman Beef Cury</ui5-li>
-                    <ui5-li image="https://www.themealdb.com/images/media/meals/sytuqu1511553755.jpg"
-                        icon="hint"
-                        icon-end
-                        description="Beef, Thai">Massaman Beef Cury</ui5-li>
                 </ui5-list>
         </div>
 
@@ -66,42 +87,21 @@
 
     <ui5-dialog id="hello-dialog" stretch header-text="Massaman Beef Cury">
         <section class="dialog">
-            <ui5-avatar id="myCustomAvatar" shape="Square" size="XL" style="width: 300px; height: 300px; margin:10px 0;">
-                <img src="https://www.themealdb.com/images/media/meals/sytuqu1511553755.jpg" alt="Lamp" style="object-fit: cover">
+            <ui5-avatar shape="Square" size="XL" style="width: 300px; height: 300px; margin:10px 0;">
+                <img src="" id="myImage" alt="Lamp" style="object-fit: cover">
             </ui5-avatar>
     
-            <div class="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <div class="description" id="desc">
             </div>
     
-            <ui5-table class = "table">
-                <ui5-table-column slot="columns" min-width="1000">
+            <ui5-table class = "table" id="table">
+                <ui5-table-column slot="columns">
                     <span style="line-height: 1.4rem; font-weight: var(--fontweight1);">Ingredients</span>
                 </ui5-table-column>
             
-                <ui5-table-column slot="columns" min-width="800">
+                <ui5-table-column slot="columns">
                     <span style="line-height: 1.4rem; font-weight: var(--fontweight1);">Measure</span>
                 </ui5-table-column>
-
-                <ui5-table-row>
-                    <ui5-table-cell>Vegetable Oil</ui5-table-cell>
-                    <ui5-table-cell>2 tbs</ui5-table-cell>
-                </ui5-table-row>
-
-                <ui5-table-row>
-                    <ui5-table-cell>Minced Beef</ui5-table-cell>
-                    <ui5-table-cell>500g</ui5-table-cell>
-                </ui5-table-row>
-
-                <ui5-table-row>
-                    <ui5-table-cell>Onion</ui5-table-cell>
-                    <ui5-table-cell>1 chopped</ui5-table-cell>
-                </ui5-table-row>
-                
-                <ui5-table-row>
-                    <ui5-table-cell>Tomato Puree</ui5-table-cell>
-                    <ui5-table-cell>1 tbis</ui5-table-cell>
-                </ui5-table-row>
 
             </ui5-table>
         </section>
