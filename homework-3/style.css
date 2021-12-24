@@ -14,3 +14,40 @@
     --fontweight2: 400;
 }
 
+.inputs {
+    text-align:center;
+    margin:30px auto;
+}
+
+.input {
+    margin: 0 10px;
+}
+
+.panel {
+    width: 75%;
+    margin: auto;
+    border: 1px solid var(--color4);
+    border-radius: var(--borderradius1);
+    padding: 15px 0;
+
+}
+
+#myList {
+    width:97%;
+    margin: 0 auto;
+}
+
+.dialog {
+    margin: 0 20px;
+    text-align: center;
+    font-size: var(--fontsize1);
+    font-weight: var(--fontweight2);
+}
+
+#closeDialogButton {
+    margin: 10px auto;
+}
+
+.table ui5-table-row{
+    text-align:left;
+}

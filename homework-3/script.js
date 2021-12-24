@@ -10,3 +10,19 @@ import "https://unpkg.com/@ui5/webcomponents@1.0.2/dist/TableColumn.js?module";
 import "https://unpkg.com/@ui5/webcomponents@1.0.2/dist/TableRow.js?module";
 import "https://unpkg.com/@ui5/webcomponents@1.0.2/dist/TableCell.js?module";
 import "https://unpkg.com/@ui5/webcomponents-icons@1.0.2/dist/hint.js?module";
+import "https://unpkg.com/@ui5/webcomponents@1.0.2/dist/Avatar.js?module";
+
+
+
+	var dialogOpener = document.getElementById("myList");
+	var dialog = document.getElementById("hello-dialog");
+	var dialogCloser = document.getElementById("closeDialogButton");
+
+	dialogOpener.addEventListener("click", (event) => {
+        const element = event.target;
+		dialog.show();
+	});
+
+	dialogCloser.addEventListener("click", () => {
+		dialog.close();
+	});
