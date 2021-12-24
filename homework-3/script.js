@@ -22,7 +22,9 @@ import "https://unpkg.com/@ui5/webcomponents@1.0.2/dist/Avatar.js?module";
 
 const list = document.getElementById("myList");
 const dialog = document.getElementById("hello-dialog");
+const dialogAdd = document.getElementById("add-recipe");
 const dialogCloser = document.getElementById("closeDialogButton");
+const dialogCloserAdd = document.getElementById("closeDialogButton2");
 const filterByName = document.getElementById("filter-by-name");
 const filterByRegion = document.getElementById("filter-by-region");
 const filterByCategory = document.getElementById("filter-by-category");
@@ -131,7 +133,6 @@ onInitialLoad();
 
 list.addEventListener("click", (event) => {
     const element = event.target;
-    console.log(element);
     createDialog(parseInt(element.getAttribute("data-id")));
     dialog.show();
 });
@@ -219,6 +220,11 @@ loadButton.addEventListener("click", () => {
 
 
 addButton.addEventListener("click", () => {
-    
+    dialogAdd.show();
 
+});
+
+
+dialogCloserAdd.addEventListener("click", () => {
+    dialogAdd.close();
 });

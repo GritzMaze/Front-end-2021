@@ -31,7 +31,7 @@
             <ui5-button design="Negative" icon="delete" id="clear">Clear storage</ui5-button>
             <ui5-button icon="hide" design="Negative" id="hide" ></ui5-button>
         </div>
-        <ui5-dialog id="add-recipe" header-text="Add a recipe">
+        <ui5-dialog id="add-recipe" stretch header-text="Add a recipe">
             <section class="login-form">
                 <div>
                     <ui5-label for="name">Name: </ui5-label>
@@ -67,13 +67,18 @@
                         <ui5-table-column slot="columns">
                             <span style="line-height: 1.4rem; font-weight: var(--fontweight1);">Measure</span>
                         </ui5-table-column>
+
+                        <ui5-table-row id="new-row">
+                            <ui5-input id="form-ingredient1" type="Text" placeholder="Ingredient" required></ui5-input>
+                            <ui5-input id="form-measure1" type="Text" placeholder="Measure" required></ui5-input>
+                        </ui5-table-row>
                     </ui5-table>
                 </div>
             </section>
         
             <div slot="footer"	class="dialog-footer">
                 <div style="flex: 1;"></div>
-                <ui5-button id="closeDialogButton" design="Emphasized">Register</ui5-button>
+                <ui5-button id="closeDialogButton2" design="Emphasized">Submit</ui5-button>
             </div>
         </ui5-dialog>
         <div class="panel">
@@ -95,7 +100,7 @@
             </div>
     
             <ui5-table class = "table" id="table">
-                <ui5-table-column slot="columns">
+                <ui5-table-column slot="columns" style="width:65%">
                     <span style="line-height: 1.4rem; font-weight: var(--fontweight1);">Ingredients</span>
                 </ui5-table-column>
             
