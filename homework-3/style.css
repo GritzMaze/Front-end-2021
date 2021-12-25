@@ -44,7 +44,7 @@
     font-weight: var(--fontweight2);
 }
 
-#closeDialogButton {
+#closeDialogButton, #closeDialogButton2 {
     margin: 10px auto;
 }
 
@@ -54,4 +54,24 @@
 
 .table ui5-table-row{
     text-align:left;
+}
+
+#login-form {
+    margin:auto;
+    text-align:center;
+}
+
+#login-form > div {
+    display: grid;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+#login-form ui5-input {
+    margin:auto;
+}
+
+#button-submit {
+    margin: 5px auto;
+    width: 10rem;
 }
